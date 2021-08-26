@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+  android:layout_margin="30dp"
+    android:layout_height="240dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:id="@+id/internet_dialogtext"
+        android:layout_marginTop="2dp"
+        android:padding="2dp"
+        android:text="You Are Offline!\n choose Options Below to on the internet "
+        android:textSize="30dp">
+
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_below="@+id/internet_dialogtext"
+        android:layout_alignParentBottom="true"
+
+
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:id="@+id/wifi"
+            android:layout_weight="1"
+            android:text="On Wifi"
+            android:layout_height="60dp"></Button>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:id="@+id/mobiledata"
+            android:text="Mobile Data"
+            android:textAlignment="center"
+            android:layout_height="60dp"></Button>
+
+
+    </LinearLayout>
+</RelativeLayout>

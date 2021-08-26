@@ -1,0 +1,33 @@
+package com.shoppa.ui.QuoteNow;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+
+import com.shoppa.R;
+
+public class QuoteNowFragment extends Fragment {
+
+    private QuoteNowViewModel mViewModel;
+
+    public static QuoteNowFragment newInstance() {
+        return new QuoteNowFragment();
+    }
+
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+
+        mViewModel = new ViewModelProvider(this).get(QuoteNowViewModel.class);
+        View root = inflater.inflate(R.layout.quote_now_fragment, container, false);
+        return root;
+
+    }
+
+}

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/category_cell_main_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@color/invisible">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/invisible">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="40dp"
+            android:minHeight="120dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+            app:strokeColor="@color/red"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingVertical="20dp"
+                android:paddingStart="60dp"
+                android:paddingEnd="30dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/product_name_cell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:shadowColor="@color/teal_200"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1.5"
+                    android:text="Product Name"
+                    android:textColor="@color/purple_700"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-medium" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/categpry_pro_cell_seller_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="0 Sellers" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:theme="@style/circleImageView"
+                        app:srcCompat="@drawable/shoppa_logo" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="5dp"
+                        app:srcCompat="@drawable/shoppa_logo" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:theme="@style/circleImageView"
+                        app:srcCompat="@drawable/icons8_chat_message_24" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="5dp"
+                        android:theme="@style/circleImageView"
+                        app:srcCompat="@drawable/icons8_phone_message_50" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/product_cell_img"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="20dp"
+            android:elevation="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/shoppa_logo"
+            android:theme="@style/circleImageView" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="41dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            android:elevation="10dp"
+            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:theme="@style/circleImageView"
+            app:tint="@color/dark_red" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

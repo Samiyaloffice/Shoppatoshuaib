@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.Package.PackagesFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="1000dp"
+        android:layout_height="225dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="50dp"
+        android:background="@color/grey"
+        android:theme="@style/circleImageView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="1000dp"
+        android:layout_height="215dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="75dp"
+
+        android:background="@drawable/packages_gradient"
+        android:theme="@style/circleImageView" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/package_swipe_layout"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Our Premium\nPackages"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Premium Features and Ultimate Services"
+                    android:textColor="@color/white" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/package_fragment_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="800dp"
+                    android:nestedScrollingEnabled="false" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</FrameLayout>

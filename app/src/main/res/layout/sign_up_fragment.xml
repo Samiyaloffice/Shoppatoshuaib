@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/packages_gradient"
+    tools:context=".ui.SignupScreen.SignUpFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/sign_up_txt_background_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        app:srcCompat="@color/white" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="20dp"
+                        android:text="Create\nAccount."
+                        android:textColor="@color/purple_700"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="39dp"
+                            android:layout_height="40dp"
+                            android:theme="@style/circleImageView"
+                            app:srcCompat="@drawable/shoppa_logo" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:layout_weight="1"
+                            android:text="Shoppa"
+                            android:layout_marginStart="5dp"
+                            android:textAllCaps="true"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="50dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/signUp_screen_buyer_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/dark_red"
+                            android:text="Buyer"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:elevation="10dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/signUp_screen_seller_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:text="Seller"
+                            android:textColor="@color/dark_red"
+                            android:textStyle="bold"
+                            app:elevation="10dp"
+                            app:strokeColor="@color/dark_red"
+                            app:strokeWidth="1dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="50dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:text="Personal Information"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <!--<com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:nextClusterForward="@color/teal_200"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:backgroundTint="#00FFFFFF"
+                            android:layout_height="wrap_content"
+                            android:hint="Full Name"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/teal_200"
+                            android:textCursorDrawable="@color/teal_200" />
+                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                    <EditText
+                        android:id="@+id/sign_up_full_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:hint="Full Name"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/white" />
+
+                    <EditText
+                        android:id="@+id/sign_up_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:hint="Password"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textCursorDrawable="@color/teal_200"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey"
+                        android:visibility="gone" />
+
+
+                    <EditText
+                        android:id="@+id/sign_up_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:digits="0123456789+"
+                        android:hint="Phone Number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey" />
+
+                    <EditText
+                        android:id="@+id/sign_up_company_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:hint="Comapny Name"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey" />
+
+                    <EditText
+                        android:id="@+id/sing_up_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:hint="Address"
+                        android:inputType="textPostalAddress"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey" />
+
+                    <EditText
+                        android:id="@+id/sign_up_seller_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:hint="Seller Type"
+                        android:inputType="text"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:hint="Seller Plan"
+                        android:inputType="text"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textCursorDrawable="@color/teal_200"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey"
+                        android:visibility="gone" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Upload Image"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginVertical="20dp"
+                        android:layout_marginStart="30dp">
+
+                        <RelativeLayout
+                            android:id="@+id/sign_up_img_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/sign_up_img"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY" />
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/sign_up_cancel_img"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentEnd="true"
+                                android:background="@color/white"
+                                android:theme="@style/circleImageView"
+                                app:srcCompat="@drawable/ic_outline_cancel_24" />
+
+                        </RelativeLayout>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/sign_up_add_img_card"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="10dp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="5dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/ic_baseline_add_24" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Upload Banner"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginVertical="20dp"
+                        android:layout_marginStart="30dp">
+
+                        <RelativeLayout
+                            android:id="@+id/sign_up_banner_img_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/sign_up_banner_img"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY" />
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/sign_up_cancel_banner_img"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentEnd="true"
+                                android:background="@color/white"
+                                android:theme="@style/circleImageView"
+                                app:srcCompat="@drawable/ic_outline_cancel_24" />
+
+                        </RelativeLayout>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/sign_up_add_img_banner_card"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="10dp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="5dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/ic_baseline_add_24" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:text="Business Information"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/sign_up_business_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:hint="Business Title"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey" />
+
+                    <EditText
+                        android:id="@+id/sign_up_business_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="Business Description"
+                        android:inputType="text"
+                        android:maxLength="150"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey" />
+
+                    <EditText
+                        android:id="@+id/sign_up_gst_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:hint="G.S.T Number"
+                        android:inputType="text"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey" />
+
+                    <EditText
+                        android:id="@+id/sign_up_employees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:hint="No. of Employees"
+                        android:inputType="number"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey" />
+
+                    <EditText
+                        android:id="@+id/sign_up_sort_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:hint="Sort Order"
+                        android:inputType="number"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey" />
+
+                    <EditText
+                        android:id="@+id/sign_up_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:hint="Your Product"
+                        android:inputType="text"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Upload Logo"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginVertical="20dp"
+                        android:layout_marginStart="30dp">
+
+                        <RelativeLayout
+                            android:id="@+id/sign_up_logo_img_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/sign_up_logo_img"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY" />
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/sign_up_cancel_logo_img"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentEnd="true"
+                                android:background="@color/white"
+                                android:theme="@style/circleImageView"
+                                app:srcCompat="@drawable/ic_outline_cancel_24" />
+
+                        </RelativeLayout>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/sign_up_add_img_logo_card"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="10dp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="5dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/ic_baseline_add_24" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey" />
+
+                    <!--Gone Items
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Select Category"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:hint="e.g Furniture"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textCursorDrawable="@color/teal_200"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="13dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:hint="Products"
+                        android:inputType="text"
+                        android:textColor="@color/teal_200"
+                        android:textColorHint="#9AF1F1F1"
+                        android:textCursorDrawable="@color/teal_200"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@color/grey"
+                        android:visibility="gone" />
+
+                    Gone Items-->
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sign_up_continue_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Continue"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>

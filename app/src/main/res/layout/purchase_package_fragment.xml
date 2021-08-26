@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.WebView.WebViewFragment">
+
+    <WebView
+        android:id="@+id/purchase_package_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Hello" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/web_view_fab_home_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        app:tint="@color/white"
+        android:backgroundTint="@color/purple_700"
+        android:src="@drawable/ic_outline_home_24"/>
+
+</FrameLayout>
